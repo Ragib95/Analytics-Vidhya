@@ -1,0 +1,33 @@
+{% extends 'jobs/nav.html' %}
+
+{% block content %}
+
+            <div class="box">
+                <div class="col-md-10">
+                    <h2 class="heading"><a href="{% url 'candidate' candidate_name=candidate.name %}" target="_blank">{{ candidate.name }}</a></h2>
+                    <ul class="detail">
+                        <li><span class="col-md-3">Resume</span> <span class="col-md-9">: {{ candidate.resume }}</span></li>
+                        <li><span class="col-md-3">Mobile</span> <span class="col-md-9">: {{ candidate.mobile }}</span></li>
+                        <li><span class="col-md-3">Email</span> <span class="col-md-9">: {{ candidate.email }}</span></li>
+                        <li><span class="col-md-3">Skills</span> <span class="col-md-9">: {{ candidate.skills }}</span></li>
+                        <li><span class="col-md-3">Work Experience</span> <span class="col-md-9">: {{ candidate.work_experience }}</span></li>
+                        <li><span class="col-md-3">Analytics Experience</span> <span class="col-md-9">: {{ candidate.analytics_experience }}</span></li>
+                        <li><span class="col-md-3">Current Location</span> <span class="col-md-9">: {{ candidate.current_loc }}</span></li>
+                        <li><span class="col-md-3">Corrected Location</span> <span class="col-md-9">: {{ candidate.corrected_loc }}</span></li>
+                        <li><span class="col-md-3">Nearest City</span> <span class="col-md-9">: {{ candidate.nearest_city }}</span></li>
+                        <li><span class="col-md-3">Preferred Location</span> <span class="col-md-9">: {{ candidate.preferred_loc }}</span></li>
+                        <li><span class="col-md-3">CTC</span> <span class="col-md-9">: {{ candidate.ctc }}</span></li>
+                        <li><span class="col-md-3">Current Employer</span> <span class="col-md-9">: {{ candidate.current_employer }}</span></li>
+                        <li><span class="col-md-3">Current Designation</span> <span class="col-md-9">: {{ candidate.current_designation }}</span></li>
+                        <li><span class="col-md-3">Skills</span> <span class="col-md-9">: {{ candidate.skills }}</span></li>
+                        <li><span class="col-md-3">U.G Course</span> <span class="col-md-9">: {{ candidate.ug_course }}</span></li>
+                        <li><span class="col-md-3">U.G Institute</span> <span class="col-md-9">: {{ candidate.ug_institute }}</span></li>
+                        <li><span class="col-md-3">U.G Passing Year</span> <span class="col-md-9">: {{ candidate.ug_passing }}</span></li>
+                        <li><span class="col-md-3">P.G Course</span> <span class="col-md-9">: {{ candidate.pg_course }}</span></li>
+                        <li><span class="col-md-3">P.G Institute</span> <span class="col-md-9">: {{ candidate.pg_institute }}</span></li>
+                        <li><span class="col-md-3">P.G Passing Year</span> <span class="col-md-9">: {{ candidate.pg_passing }}</span></li>
+                    </ul>
+                </div>
+            </div>
+
+{% endblock %}

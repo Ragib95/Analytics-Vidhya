@@ -1,0 +1,39 @@
+{% extends 'jobs/nav.html' %}
+
+{% block content %}
+    <div class="col-md-3">
+        <h3>Search</h3>
+        <div class="search">
+            <div class="search">
+                <div class="search_content">
+                    <div class="input">
+                        <form action="{% url 'search' %}" method="get">
+                            <input type="text" placeholder="Sort by Location..." title="Search Location..." name="location" autocomplete="off">
+                            <hr>
+                            <input type="text" placeholder="Sort by Skills..." title="Search Skills..." name="skills" autocomplete="off">
+                            <hr>
+                            <input type="submit" value="submit" class="srch-btn1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-9">
+    {% for candidate in candidates %}
+            <div class="box">
+                <div class="col-md-10">
+                    <h2 class="heading"><a href="{% url 'candidate' candidate_name=candidate.name %}" target="_blank">{{ candidate.name }}</a></h2>
+                    <ul class="detail">
+                        <li><span class="col-md-3">Work Experience</span> <span class="col-md-9">: {{ candidate.work_experience }}</span></li>
+                        <li><span class="col-md-3">Mobile</span> <span class="col-md-9">: {{ candidate.mobile }}</span></li>
+                        <li><span class="col-md-3">Email</span> <span class="col-md-9">: {{ candidate.email }}</span></li>
+                        <li><span class="col-md-3">Skills</span> <span class="col-md-9">: {{ candidate.skills }}</span></li>
+                    </ul>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+{% endblock %}

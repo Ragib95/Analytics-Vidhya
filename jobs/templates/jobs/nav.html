@@ -1,0 +1,422 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+      <title ng-bind="title" class="ng-binding">Largest data-science job portal </title>
+      <base href="/jobs/#/">
+      <!-- CSS  -->
+      <link href="/jobs/styles/materialize/icon.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="/jobs/styles/materialize/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+      <link rel="stylesheet" href="/jobs/styles/autocomplete.css">
+        <!-- Required dependencies -->
+        <meta name="description" content="Machine Learning Jobs, Data Science Jobs, Excel, tableau, pig, hive, hadoop, sas, business analysis Jobs">
+        <meta name="keywords" content="data science, data analytics jobs, python, r, analytics, sql, statistics">
+      <link href="/jobs/styles/materialize/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+      <link href="/jobs/static/textAngular.css" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}" />
+      <style>
+      .font-weight-300{
+          font-weight:300;
+      }
+      span.badge2{
+        min-width: 3rem;
+        padding: 5px 6px;
+        text-align: center;
+        font-size: 1rem;
+        line-height: inherit;
+        color: #757575;
+        right: 15px;
+        box-sizing: border-box;
+      }
+      .border-bottom-with-padding{
+        padding-bottom: 5px;
+        border-bottom: 1px solid #f9efef;
+      }
+      .border-bottom-av-red{
+        border-bottom: 1px solid #d63f12;
+      }
+      .border-bottom-av-blue{
+        border-bottom: 1px solid #09436f;
+      }
+      .border-right-av-blue{
+        border-right: 1px solid #09436f;
+      }
+      .field_error{
+        box-shadow: 0 1px 0 0 red !important;
+        border-bottom: 1px solid red;
+      }
+      .width-100{
+        width:100% !important;
+      }
+      .smaller{
+        font-size: smaller !important;
+      }
+      .cross{
+        cursor:pointer;
+      }
+      .margin-15{
+        margin:15px !important;
+      }
+      .margin-bottom-10{
+        margin-bottom: 10px !important;
+      }
+      .margin-top-10{
+        margin-top:10px !important;
+      }
+      .margin-top-5{
+        margin-top:5px !important;
+      }
+      .margin-top-20{
+        margin-top:20px !important;
+      }
+      .margin-top-30{
+        margin-top:30px !important;
+      }
+      .margin-top-40{
+        margin-top:40px !important;
+      }
+      .margin-top-50{
+        margin-top:50px !important;
+      }
+      .margin-top_5{
+        margin-top: -5px !important;
+      }
+      .margin-top_15{
+        margin-top: -15px !important;
+      }
+      .margin-bottom_10{
+        margin-bottom:-10px !important;
+      }
+      .margin-bottom-20{
+        margin-bottom:20px !important;
+      }
+      .margin-bottom-30{
+        margin-bottom:30px !important;
+      }
+      .margin-bottom-50{
+        margin-bottom:50px !important;
+      }
+      .margin-left-40{
+        margin-left:40px !important;
+      }
+      .margin-left_10{
+        margin-left:-10px !important;
+      }
+      .margin-left-30{
+        margin-left:30px !important;
+      }
+      .margin-left-20{
+        margin-left:20px !important;
+      }
+      .margin-left-10{
+        margin-left:10px !important;
+      }
+
+      .margin-right-40{
+        margin-right:40px !important;
+      }
+      .margin-right-30{
+        margin-right:30px !important;
+      }
+      .margin-right-20{
+        margin-right:20px !important;
+      }
+      .margin-right-10{
+        margin-right:10px !important;
+      }
+
+      .padding-5{
+        padding: 5px;
+      }
+      .padding-10{
+        padding:10px !important;
+      }
+      .padding-20{
+        padding:20px !important;
+      }
+      .padding-30{
+        padding:30px !important;
+      }
+      .pad-top-10{
+        padding-top:10px !important;
+      }
+      .pad-bottom-10{
+        padding-bottom:10px !important;
+      }
+      .pad-bottom-15{
+        padding-bottom:15px !important;
+      }
+      .pad-bottom-20{
+        padding-bottom:20px !important;
+      }
+      .pad-bottom-30{
+        padding-bottom:30px !important;
+      }
+      .pad-left-20{
+        padding-left: 20px !important;
+      }
+      .pad-right-20{
+        padding-right: 20px !important;
+      }
+      .pad-right-10{
+        padding-right: 10px !important;
+      }
+      .oval{
+        border: 1px solid #09436f;
+        border-radius:5px;
+        padding:5px;border
+      }
+      .border-av-blue{
+        border: 1px solid #09436f;
+        border-radius:5px;
+      }
+      .collapsible-header i.fa{
+        width:35px !important;
+        font-size:1.5rem !important;border
+        line-height:41px !important;
+        margin-right:0px !important;
+      }
+      .collapsible-header.active{
+        background:#ddd;
+      }
+      .underline{
+        text-decoration: underline
+      }
+      .av-red{
+        background-color: #d63f12 !important;
+      }
+      .tabs .tab a{
+        border-bottom:1px solid #d63f12;
+      }
+
+      .intro{
+        background-size:cover !important;
+        padding:144px 0;
+      }
+      @media screen and (max-width: 899px) {
+          .small-text{
+            font-size: x-large;
+          }
+          .padding-0{
+            padding:0px !important;
+          }
+        }
+      @media screen and (min-width: 900px) {
+          .intro{
+              background:url('/jobs/styles/background-small.jpg') no-repeat center center;
+          }
+      }
+      @media screen and (min-width: 1400px) {
+          .intro{
+              background:url('/jobs/styles/background-large.jpg') no-repeat center center;
+          }
+      }
+      .border-1px{
+        border:1px solid #09436f;
+      }
+      .display-inline-block{
+        display:inline-block;
+      }
+      .display-block{
+        display:block !important;
+      }
+      .card-box ul li, .box ul li{
+        display:inline-block;
+        padding-left:10px;
+      }
+      button[disabled]
+      {
+        background-color:#DFDFDF !important;
+        box-shadow: none;
+        color:#9F9F9F !important;
+        cursor:default;
+      }
+      button.btn.waves-effect.waves-light["disabled"]:hover{
+        box-shadow:none;
+      }
+      button["disabled"]:hover{
+        background-color: #DFDFDF !important;
+        color:#9F9F9F !important;
+        box-shadow: none;
+      }
+      .nav-bar-heading
+      {
+         margin-top:5px;
+         background-color:#4285F4;
+         padding-top:10px;
+         color:white;
+         height:50px;
+         width:50px;
+         border-radius:25px;
+         font-size:28px;
+         text-align:center;
+      }
+      .width-40{
+        width: 40%;
+      }
+      .width-60{
+        width: 60%;
+      }
+      .height-250{
+        height:250px !important;
+      }
+
+      .height-150{
+        height:150px !important;
+      }
+      .height-450{
+        height:450px !important;
+      }
+      .height-350{
+        height:350px !important;
+      }
+      .height-300{
+        height:300px !important;
+      }
+      .height-200{
+        height:200px !important;
+      }
+
+      .height-100{
+        height:100px !important;
+      }
+
+      .height-50{
+        height:50px !important;
+      }
+      .larger{
+        font-size: larger;
+      }
+      .visible{
+        visibility: hidden;
+      }
+
+      </style>
+      <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://use.fontawesome.com/96c6f4ae94.js"></script><link href="https://use.fontawesome.com/96c6f4ae94.css" media="all" rel="stylesheet">
+
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/7/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/7/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/7/stats.js"></script>
+</head>
+<body>
+<nav class="white lighten-1 ng-scope" role="navigation" ng-controller="navController">
+    <div class="nav-wrapper container" style="width:90%">
+
+
+
+      <ul class="left hide-on-med-and-down">
+
+        <a id="logo-container" href="http://analyticsvidhya.com" class="brand-logo" style="height:100%"><img src="https://datahack.analyticsvidhya.com/static/analyticsvidhya.jpg" style="height:92% !important; margin-top:3px"></a>
+        <li><a href="https://analyticsvidhya.com" class="white-text right">Analytics Vidhya</a></li>
+        <li><a href="https://analyticsvidhya.com" class="white-text right">Blog</a></li>
+        <li><a href="https://analyticsvidhya.com" class="white-text right">Blog</a></li>
+        <li><a href="https://analyticsvidhya.com" class="black-text right">Blog</a></li>
+        <li><a href="https://datahack.analyticsvidhya.com" class="black-text right">Datahack</a></li>
+        <li><a href="https://discuss.analyticsvidhya.com/" class="black-text right">Discuss</a></li>
+        <li><a href="https://www.analyticsvidhya.com/trainings/" class="black-text right">Trainings</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down visible" style="visibility: visible;">
+        <li ng-show="$root.user_type == 'company'" class="ng-hide"><a ui-sref="home" class="black-text" href="#/">Home</a></li>
+        <li ng-show="$root.user_type == 'company'" class="ng-hide"><a ui-sref="job.job_post_type_choices" class="black-text" href="#/job/select-payment-plans">Create Job</a></li>
+        <li ng-show="$root.user_type == 'user'" class="ng-hide"><a ui-sref="home" class="black-text" href="#/">Discover Jobs</a></li>
+        <li ng-show="$root.user_type == 'user' &amp;&amp; ($root.access_level == 'u')" class="ng-hide"><a ui-sref="user.my_applications" class="black-text" href="#/user/my-jobs">My Jobs</a></li>
+        <li ng-show="$root.user_type == 'user' &amp;&amp;  ($root.access_level == 'a')" class="ng-hide"><a ui-sref="admin.dashboard" class="black-text" href="#/admin/dashboard/">Admin Dashboard</a></li>
+                <li><a ui-sref="home" class="black-text ng-hide" ng-hide="!login || !mode_disabled" href="#/">Home</a></li>
+        <li><a ui-sref="login" class="black-text" ng-hide="!login" href="/admin" target="_blank">Admin</a></li>
+        <li ng-hide="login" class="ng-hide">
+          <a class="dropdown-button black-text ng-hide" href="#!" data-activates="dropdown2" ng-hide="login">
+            <h1 class="nav-bar-heading ng-binding ng-hide" ng-bind="$root.name.charAt(0)" ng-show="($root.user_type=='user'  &amp;&amp; !$root.profile_photo )|| $root.user_type=='company'"></h1>
+            <img class="margin-top-10 ng-hide" style="height:48px;width:48px;border-radius:24px" ng-show="$root.user_type=='user' &amp;&amp; $root.profile_photo">
+
+          </a><ul id="dropdown2" class="dropdown-content ng-hide" style="width:200px !important; position:absolute !important; left:980px !important" ng-hide="login">
+        <li ng-show="$root.access_level == 'a'" class="ng-hide"><a ui-sref="admin.dashboard" class="black-text" href="#/admin/dashboard/">Admin Dashboard</a></li>
+        <li ng-show="$root.user_type == 'company'" class="ng-hide"><a ui-sref="home" class="black-text" href="#/">Home</a></li>
+        <li ng-show="$root.user_type == 'user'" class="ng-hide"><a ui-sref="home" class="black-text" href="#/">Discover Jobs</a></li>
+        <li ng-show="$root.user_type == 'user'" class="ng-hide"><a ui-sref="user.my_applications" class="black-text" href="#/user/my-jobs">My Jobs</a></li>
+        <li ng-show="$root.user_type == 'user'" class="ng-hide"><a ui-sref="user.update" class="black-text" href="#/user/update">Update Profile</a></li>
+        <!--<li  ng-show="$root.user_type == 'user'"><a ui-sref="user.preferences" class = "black-text">Preferences</a></li>-->
+        <li ng-show="$root.user_type == 'company'" class="ng-hide"><a ui-sref="company.update" class="black-text" href="#/company/update">Update Profile</a></li>
+        <li ng-show="$root.user_type == 'company'" class="ng-hide"><a ui-sref="job.job_post_type_choices" class="black-text" href="#/job/select-payment-plans">Create Job</a></li>
+        <li><a ui-sref="logout" class="black-text" href="#/logout/">Logout</a></li>
+      </ul>
+        </li>
+        <li><a href="{% url 'jobs' %}" ng-class="{'blue white-text': $root.show_company, 'black-text grey lighten-2': !$root.show_company}" ng-click="change_user_mode()" ng-show="login &amp;&amp; !mode_disabled" class="black-text grey lighten-2">Recruiter</a></li>
+        <li><a ng-class="{'blue white-text': $root.show_company, 'black-text grey lighten-2': !$root.show_company}" ng-click="change_user_mode()" ng-show="login &amp;&amp; !mode_disabled" class="black-text grey lighten-2"></a></li>
+
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+        <!-- ngIf: $root.user_type=='company' -->
+        <li><a href="https://analyticsvidhya.com" class="black-text">Blog</a></li>
+        <li><a href="https://datahack.analyticsvidhya.com" class="black-text">Datahack</a></li>
+        <li><a href="https://discuss.analyticsvidhya.com/" class="black-text">Discuss</a></li>
+        <li><a href="https://www.analyticsvidhya.com/trainings/" class="black-text">Trainings</a></li>
+        <li ng-show="$root.user_type == 'user'" class="ng-hide"><a ui-sref="home" class="black-text" href="#/">Discover Jobs</a></li>
+        <li ng-show="$root.user_type == 'user'" class="ng-hide"><a ui-sref="user.my_applications" class="black-text" href="#/user/my-jobs">My Jobs</a></li>
+        <!-- ngIf: $root.user_type=='user' -->
+        <!--<li ng-if="$root.user_type=='user'"><a ui-sref="user.preferences" class = "black-text" ng-show="user_type == 'user'">Preferences</a></li>-->
+        <!-- ngIf: $root.user_type=='company' -->
+        <li><a ui-sref="job.job_post_type_choices" class="black-text ng-hide" ng-show="user_type == 'company'" href="#/job/select-payment-plans">Create Job</a></li>
+        <li><a ui-sref="login" class="black-text" ng-show="login" href="#/login/">Login</a></li>
+        <li><a ui-sref="logout" class="black-text ng-hide" ng-hide="login" href="#/logout/">Logout</a></li>
+        <li><a ui-sref="/#/" class="white-text blue ng-binding" ng-click="change_user_mode();" ng-show="login &amp;&amp; !mode_disabled">I want to hire</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<footer class="page-footer grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col l4 m4 s12">
+          <h5 class="white-text ">ANALYTICS VIDHYA</h5>
+          <ul>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/about-me/">About Us</a></li>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/about-me/team/">Team</a></li>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/terms/">Terms of Use</a></li>
+
+          </ul>
+
+        </div>
+        <div class="col-md-4 col l4 m4 s12">
+          <h5 class="white-text ">DATA SCIENTISTS</h5>
+          <ul>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/blog/">Blogs</a></li>
+            <li><a class="grey-text" href="https://discuss.analyticsvidhya.com/">Discussions</a></li>
+            <li><a class="grey-text" href="https://datahack.analyticsvidhya.com/">Datahack</a></li>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/blog/category/events/">Events</a></li>
+            <li><a class="grey-text" href="https://analyticsvidhya.com/jobs">Jobs</a></li>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/trainings/">Trainings</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col l4 m4 s12">
+          <h5 class="white-text ">COMPANIES</h5>
+          <ul>
+            <li><a class="grey-text" href="https://analyticsvidhya.com/jobs">Hiring</a></li>
+            <li><a class="grey-text" href="https://datahack.analyticsvidhya.com/sponsorship/">Hackathons</a></li>
+            <li><a class="grey-text" href="https://www.analyticsvidhya.com/blog/category/events/">Events</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright black">
+      <div class="container grey-text text-darken-2">
+         © Copyright 2016 Analytics Vidhya
+         <ul class="right" style="margin-top:0px;">
+            <li style="display:inline-block;padding-right:10px"><a class="grey-text" href="https://www.analyticsvidhya.com/privacy-policy/">Privacy Policy</a></li>
+            <li style="display:inline-block;padding-right:10px"><a class="grey-text" href="https://www.analyticsvidhya.com/terms/">Terms of Use</a></li>
+         </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
